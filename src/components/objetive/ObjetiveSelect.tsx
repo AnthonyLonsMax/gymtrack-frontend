@@ -17,7 +17,7 @@ export function ObjetiveSelect({ value, onChange }: ObjetiveSelectProps) {
 			onChange={(e) => onChange?.(e.target.value)}
 		>
 			<option value="">Seleccionar objetivo</option>
-			{data?.map((o) => (
+			{data?.content.map((o) => (
 				<option key={o.id} value={o.id}>
 					{o.name}
 				</option>

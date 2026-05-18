@@ -20,6 +20,7 @@ import { Route as DashboardGoalsRouteImport } from './routes/dashboard/goals'
 import { Route as DashboardExcercicesRouteImport } from './routes/dashboard/excercices'
 import { Route as AuthRegistrationRouteImport } from './routes/auth/registration'
 import { Route as AuthLoginRouteImport } from './routes/auth/login'
+import { Route as DashboardGymdaysGymDayIdRouteImport } from './routes/dashboard/gymdays.$gymDayId'
 
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
   id: '/dashboard',
@@ -76,6 +77,12 @@ const AuthLoginRoute = AuthLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => AuthRouteRoute,
 } as any)
+const DashboardGymdaysGymDayIdRoute =
+  DashboardGymdaysGymDayIdRouteImport.update({
+    id: '/$gymDayId',
+    path: '/$gymDayId',
+    getParentRoute: () => DashboardGymdaysRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -85,10 +92,11 @@ export interface FileRoutesByFullPath {
   '/auth/registration': typeof AuthRegistrationRoute
   '/dashboard/excercices': typeof DashboardExcercicesRoute
   '/dashboard/goals': typeof DashboardGoalsRoute
-  '/dashboard/gymdays': typeof DashboardGymdaysRoute
+  '/dashboard/gymdays': typeof DashboardGymdaysRouteWithChildren
   '/dashboard/objetives': typeof DashboardObjetivesRoute
   '/dashboard/workouts': typeof DashboardWorkoutsRoute
   '/dashboard/': typeof DashboardIndexRoute
+  '/dashboard/gymdays/$gymDayId': typeof DashboardGymdaysGymDayIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -97,10 +105,11 @@ export interface FileRoutesByTo {
   '/auth/registration': typeof AuthRegistrationRoute
   '/dashboard/excercices': typeof DashboardExcercicesRoute
   '/dashboard/goals': typeof DashboardGoalsRoute
-  '/dashboard/gymdays': typeof DashboardGymdaysRoute
+  '/dashboard/gymdays': typeof DashboardGymdaysRouteWithChildren
   '/dashboard/objetives': typeof DashboardObjetivesRoute
   '/dashboard/workouts': typeof DashboardWorkoutsRoute
   '/dashboard': typeof DashboardIndexRoute
+  '/dashboard/gymdays/$gymDayId': typeof DashboardGymdaysGymDayIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -111,10 +120,11 @@ export interface FileRoutesById {
   '/auth/registration': typeof AuthRegistrationRoute
   '/dashboard/excercices': typeof DashboardExcercicesRoute
   '/dashboard/goals': typeof DashboardGoalsRoute
-  '/dashboard/gymdays': typeof DashboardGymdaysRoute
+  '/dashboard/gymdays': typeof DashboardGymdaysRouteWithChildren
   '/dashboard/objetives': typeof DashboardObjetivesRoute
   '/dashboard/workouts': typeof DashboardWorkoutsRoute
   '/dashboard/': typeof DashboardIndexRoute
+  '/dashboard/gymdays/$gymDayId': typeof DashboardGymdaysGymDayIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/dashboard/objetives'
     | '/dashboard/workouts'
     | '/dashboard/'
+    | '/dashboard/gymdays/$gymDayId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/dashboard/objetives'
     | '/dashboard/workouts'
     | '/dashboard'
+    | '/dashboard/gymdays/$gymDayId'
   id:
     | '__root__'
     | '/'
@@ -155,6 +167,7 @@ export interface FileRouteTypes {
     | '/dashboard/objetives'
     | '/dashboard/workouts'
     | '/dashboard/'
+    | '/dashboard/gymdays/$gymDayId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -242,6 +255,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthLoginRouteImport
       parentRoute: typeof AuthRouteRoute
     }
+    '/dashboard/gymdays/$gymDayId': {
+      id: '/dashboard/gymdays/$gymDayId'
+      path: '/$gymDayId'
+      fullPath: '/dashboard/gymdays/$gymDayId'
+      preLoaderRoute: typeof DashboardGymdaysGymDayIdRouteImport
+      parentRoute: typeof DashboardGymdaysRoute
+    }
   }
 }
 
@@ -259,10 +279,21 @@ const AuthRouteRouteWithChildren = AuthRouteRoute._addFileChildren(
   AuthRouteRouteChildren,
 )
 
+interface DashboardGymdaysRouteChildren {
+  DashboardGymdaysGymDayIdRoute: typeof DashboardGymdaysGymDayIdRoute
+}
+
+const DashboardGymdaysRouteChildren: DashboardGymdaysRouteChildren = {
+  DashboardGymdaysGymDayIdRoute: DashboardGymdaysGymDayIdRoute,
+}
+
+const DashboardGymdaysRouteWithChildren =
+  DashboardGymdaysRoute._addFileChildren(DashboardGymdaysRouteChildren)
+
 interface DashboardRouteRouteChildren {
   DashboardExcercicesRoute: typeof DashboardExcercicesRoute
   DashboardGoalsRoute: typeof DashboardGoalsRoute
-  DashboardGymdaysRoute: typeof DashboardGymdaysRoute
+  DashboardGymdaysRoute: typeof DashboardGymdaysRouteWithChildren
   DashboardObjetivesRoute: typeof DashboardObjetivesRoute
   DashboardWorkoutsRoute: typeof DashboardWorkoutsRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
@@ -271,7 +302,7 @@ interface DashboardRouteRouteChildren {
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardExcercicesRoute: DashboardExcercicesRoute,
   DashboardGoalsRoute: DashboardGoalsRoute,
-  DashboardGymdaysRoute: DashboardGymdaysRoute,
+  DashboardGymdaysRoute: DashboardGymdaysRouteWithChildren,
   DashboardObjetivesRoute: DashboardObjetivesRoute,
   DashboardWorkoutsRoute: DashboardWorkoutsRoute,
   DashboardIndexRoute: DashboardIndexRoute,

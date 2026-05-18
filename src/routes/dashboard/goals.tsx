@@ -32,6 +32,12 @@ function GoalsPage() {
 
 	return (
 		<div>
+			<img
+				src="/goals-header.jpg"
+				alt=""
+				className="w-full h-48 rounded-3xl object-cover shadow-lg mb-6"
+				style={{ filter: "grayscale(100%) contrast(1.15) brightness(0.85)" }}
+			/>
 			<div className="flex items-center justify-between mb-6">
 				<h1 className="text-2xl font-heading font-medium">Metas</h1>
 				<Button onClick={handleCreate}>

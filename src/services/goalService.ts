@@ -9,7 +9,7 @@ export async function goalGetAll(
 	offset = 0,
 ) {
 	return axiosInstance
-		.get<Goal[]>(
+		.get<{ content: Goal[] }>(
 			`/api/users/${userId}/objetives/${objetiveId}/goals?limit=${limit}&offset=${offset}`,
 		)
 		.catch((err) => {

@@ -13,7 +13,7 @@ export async function gymDayWorkoutExcerciceGetAll(
 	offset = 0,
 ) {
 	return axiosInstance
-		.get<GymDayWorkoutExcercice[]>(
+		.get<{ content: GymDayWorkoutExcercice[] }>(
 			`/api/gymdays/${gymDayId}/workouts/${workoutId}/excercices?limit=${limit}&offset=${offset}`,
 		)
 		.catch((err) => {

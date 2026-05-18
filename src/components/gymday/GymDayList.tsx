@@ -1,13 +1,11 @@
 import { useDeleteGymDay, useGymDays } from "#/hooks/useGymDays";
-import type { GymDay } from "#/schemas/gymDaySchema";
 import { GymDayCard } from "./GymDayCard";
 
 export interface GymDayListProps {
-	onEdit?: (gymDay: GymDay) => void;
 	limit?: number;
 }
 
-export function GymDayList({ _onEdit, limit = 10 }: GymDayListProps) {
+export function GymDayList({ limit = 10 }: GymDayListProps) {
 	const { data, isLoading, isError, error } = useGymDays(limit);
 	const deleteMutation = useDeleteGymDay();
 
@@ -19,12 +17,12 @@ export function GymDayList({ _onEdit, limit = 10 }: GymDayListProps) {
 		);
 	if (isError)
 		return <div className="text-destructive p-4">Error: {error.message}</div>;
-	if (!data?.length)
+	if (!data?.content.length)
 		return <div className="text-muted-foreground p-4">No hay GymDays</div>;
 
 	return (
 		<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-			{data.map((gd) => (
+			{data.content.map((gd) => (
 				<GymDayCard
 					key={gd.id}
 					gymDay={gd}

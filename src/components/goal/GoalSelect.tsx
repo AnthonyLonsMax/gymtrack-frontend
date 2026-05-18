@@ -18,7 +18,7 @@ export function GoalSelect({ objetiveId, value, onChange }: GoalSelectProps) {
 			onChange={(e) => onChange?.(e.target.value)}
 		>
 			<option value="">Seleccionar meta</option>
-			{data?.map((g) => (
+			{data?.content.map((g) => (
 				<option key={g.id} value={g.id}>
 					{g.name}
 				</option>

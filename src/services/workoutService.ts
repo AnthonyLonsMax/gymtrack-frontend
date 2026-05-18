@@ -8,7 +8,7 @@ import type {
 
 export async function workoutGetAll(userId: string, limit = 10, offset = 0) {
 	return axiosInstance
-		.get<Workout[]>(
+		.get<{ content: Workout[] }>(
 			`/api/users/${userId}/workouts?limit=${limit}&offset=${offset}`,
 		)
 		.catch((err) => {

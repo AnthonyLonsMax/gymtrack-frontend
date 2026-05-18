@@ -17,7 +17,7 @@ export function WorkoutSelect({ value, onChange }: WorkoutSelectProps) {
 			onChange={(e) => onChange?.(e.target.value)}
 		>
 			<option value="">Seleccionar workout</option>
-			{data?.map((w) => (
+			{data?.content.map((w) => (
 				<option key={w.id} value={w.id}>
 					{w.name}
 				</option>

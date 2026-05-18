@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import { GymDayList } from "#/components/gymday";
@@ -6,10 +6,10 @@ import { Button } from "#/components/ui/button";
 import { useCreateGymDay } from "#/hooks/useGymDays";
 
 export const Route = createFileRoute("/dashboard/gymdays")({
-	component: GymDaysPage,
+	component: GymDaysLayout,
 });
 
-function GymDaysPage() {
+function GymDaysLayout() {
 	const createMutation = useCreateGymDay();
 	const [isFormOpen, setIsFormOpen] = useState(false);
 
@@ -32,6 +32,7 @@ function GymDaysPage() {
 				</Button>
 			</div>
 			<GymDayList />
+			<Outlet />
 			{isFormOpen && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
 					<div className="bg-card rounded-4xl p-6 w-full max-w-md shadow-xl">

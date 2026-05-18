@@ -8,7 +8,7 @@ import type {
 
 export async function objetiveGetAll(userId: string, limit = 10, offset = 0) {
 	return axiosInstance
-		.get<Objetive[]>(
+		.get<{ content: Objetive[] }>(
 			`/api/users/${userId}/objetives?limit=${limit}&offset=${offset}`,
 		)
 		.catch((err) => {

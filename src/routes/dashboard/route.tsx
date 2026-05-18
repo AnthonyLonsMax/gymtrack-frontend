@@ -5,13 +5,7 @@ import {
 	useLocation,
 	useNavigate,
 } from "@tanstack/react-router";
-import {
-	Calendar,
-	Dumbbell,
-	LogOut,
-	Target,
-	Trophy,
-} from "lucide-react";
+import { Calendar, Dumbbell, LogOut, Target, Trophy } from "lucide-react";
 import { Button } from "#/components/ui/button";
 import { useAuthStore } from "#/hooks/useAuthStore";
 
@@ -32,7 +26,7 @@ function DashboardLayout() {
 	const user = useAuthStore((s) => s.user);
 	const logout = useAuthStore((s) => s.logout);
 	const location = useLocation();
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	return (
 		<div className="flex min-h-screen">
@@ -45,7 +39,7 @@ function DashboardLayout() {
 						<Link
 							key={item.to}
 							to={item.to}
-							className={`flex items-center gap-3 rounded-3xl px-3 py-2 text-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground ${location.pathname === item.to ? "bg-sidebar-accent text-sidebar-accent-foreground" : ""}`}
+							className={`flex items-center gap-3 rounded-3xl px-3 py-2 text-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground ${location.pathname.startsWith(item.to) ? "bg-sidebar-accent text-sidebar-accent-foreground" : ""}`}
 						>
 							<item.icon className="size-4" />
 							{item.label}
@@ -65,7 +59,7 @@ function DashboardLayout() {
 						className="w-full justify-start gap-2"
 						onClick={() => {
 							logout();
-							navigate({ to: '/' })
+							navigate({ to: "/" });
 						}}
 					>
 						<LogOut className="size-4" />

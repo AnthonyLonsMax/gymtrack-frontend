@@ -4,7 +4,7 @@ import type { GymDay, GymDayCreate } from "../schemas/gymDaySchema";
 
 export async function gymDayGetAll(limit = 10, offset = 0) {
 	return axiosInstance
-		.get<GymDay[]>(`/api/gymdays?limit=${limit}&offset=${offset}`)
+		.get<{ content: GymDay[] }>(`/api/gymdays?limit=${limit}&offset=${offset}`)
 		.catch((err) => {
 			throw mapError(err);
 		});

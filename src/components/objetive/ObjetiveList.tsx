@@ -24,12 +24,12 @@ export function ObjetiveList({ onEdit, limit = 10 }: ObjetiveListProps) {
 		);
 	if (isError)
 		return <div className="text-destructive p-4">Error: {error.message}</div>;
-	if (!data?.length)
+	if (!data?.content.length)
 		return <div className="text-muted-foreground p-4">No hay objetivos</div>;
 
 	return (
 		<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-			{data.map((objetive) => (
+			{data.content.map((objetive) => (
 				<ObjetiveCard
 					key={objetive.id}
 					objetive={objetive}

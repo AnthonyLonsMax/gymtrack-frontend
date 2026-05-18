@@ -31,12 +31,12 @@ export function ExcerciceList({ onEdit, limit = 10 }: ExcerciceListProps) {
 			{isError && (
 				<div className="text-destructive p-4">Error: {error.message}</div>
 			)}
-			{!isLoading && !isError && !data?.length && (
+			{!isLoading && !isError && !data?.content.length && (
 				<div className="text-muted-foreground p-4">No hay ejercicios</div>
 			)}
-			{data && data.length > 0 && (
+			{data && data.content.length > 0 && (
 				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-					{data.map((excercice) => (
+					{data.content.map((excercice) => (
 						<ExcerciceCard
 							key={excercice.id}
 							excercice={excercice}
