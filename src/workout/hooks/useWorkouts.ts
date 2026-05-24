@@ -1,8 +1,17 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { notifyError, notifySuccess } from "#/shared/notification";
-import type { WorkoutCreate, WorkoutUpdate } from "#/workout/schema/workoutSchema";
-import { workoutGetAll, workoutGetOne, workoutCreate, workoutPatch, workoutDelete } from "../service/workoutService";
+import type {
+	WorkoutCreate,
+	WorkoutUpdate,
+} from "#/workout/schema/workoutSchema";
+import {
+	workoutGetAll,
+	workoutGetOne,
+	workoutCreate,
+	workoutPatch,
+	workoutDelete,
+} from "../service/workoutService";
 
 export function useWorkouts(userId: string, limit = 10, offset = 0) {
 	return useQuery({
