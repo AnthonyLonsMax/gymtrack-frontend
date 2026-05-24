@@ -1,13 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { notifyError, notifySuccess } from "#/shared/notification";
-import type { GymDayCreate } from "../../schemas/gymDaySchema";
-import {
-	gymDayGetAll,
-	gymDayGetOne,
-	gymDayCreate,
-	gymDayDelete,
-} from "../service/gymDayService";
+import type { GymDayCreate } from "../schema/gymDaySchema";
+import { gymDayGetAll, gymDayGetOne, gymDayCreate, gymDayDelete } from "../service/gymDayService";
 
 export function useGymDays(limit = 10, offset = 0) {
 	return useQuery({

@@ -1,14 +1,9 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { notifyError, notifySuccess } from "#/shared/notification";
-import type { ObjetiveCreate, ObjetiveUpdate } from "#/schemas/objetiveSchema";
-import {
-	objetiveGetAll,
-	objetiveGetOne,
-	objetiveCreate,
-	objetivePatch,
-	objetiveDelete,
-} from "../service/objetiveService";
+import type { ObjetiveCreate, ObjetiveUpdate } from "#/objetive/schema/objetiveSchema";
+import { objetiveGetAll, objetiveGetOne, objetiveCreate, objetivePatch, objetiveDelete } from "../service/objetiveService";
+
 
 export function useObjetives(userId: string, limit = 10, offset = 0) {
 	return useQuery({
