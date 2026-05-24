@@ -1,13 +1,12 @@
-import { TanStackDevtools } from "@tanstack/react-devtools";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { Toaster } from "sonner";
-import { queryClient } from "#/singletons/queryClient";
+import { queryClient } from "#/shared/queryClient";
 
 import "../styles.css";
+import type { AuthCtx } from "#/types/auth";
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{ auth: AuthCtx }>()({
 	component: RootComponent,
 });
 
@@ -16,17 +15,6 @@ function RootComponent() {
 		<QueryClientProvider client={queryClient}>
 			<Outlet />
 			<Toaster richColors />
-			<TanStackDevtools
-				config={{
-					position: "bottom-right",
-				}}
-				plugins={[
-					{
-						name: "TanStack Router",
-						render: <TanStackRouterDevtoolsPanel />,
-					},
-				]}
-			/>
 		</QueryClientProvider>
 	);
 }

@@ -1,9 +1,9 @@
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useState } from "react";
-import { GymDayList } from "#/components/gymday";
+import { GymDayList } from "#/gymday";
 import { Button } from "#/components/ui/button";
-import { useCreateGymDay } from "#/hooks/useGymDays";
+import { useCreateGymDay } from "#/gymday/hooks/useGymDays";
 
 export const Route = createFileRoute("/dashboard/gymdays")({
 	component: GymDaysLayout,

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import { Button } from "#/components/ui/button";
-import { WorkoutForm, WorkoutList } from "#/components/workout";
+import { WorkoutForm, WorkoutList } from "#/workout";
 import type { Workout } from "#/schemas/workoutSchema";
 
 export const Route = createFileRoute("/dashboard/workouts")({

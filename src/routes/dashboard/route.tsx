@@ -2,15 +2,21 @@ import {
 	createFileRoute,
 	Link,
 	Outlet,
+	redirect,
 	useLocation,
 	useNavigate,
 } from "@tanstack/react-router";
 import { Calendar, Dumbbell, LogOut, Target, Trophy } from "lucide-react";
 import { Button } from "#/components/ui/button";
-import { useAuthStore } from "#/hooks/useAuthStore";
+import { useAuthStore } from "#/auth/store/useAuthStore";
 
 export const Route = createFileRoute("/dashboard")({
 	component: DashboardLayout,
+	beforeLoad(ctx) {
+		if (ctx.context.auth.isLoggedIn === false) {
+			throw redirect({ to: "/auth/login" });
+		}
+	},
 });
 
 const navItems = [
@@ -30,7 +36,7 @@ function DashboardLayout() {
 
 	return (
 		<div className="flex min-h-screen">
-			<aside className="w-64 border-r bg-sidebar p-4 flex flex-col gap-2">
+			<aside className="w-64 h-screen border-r bg-sidebar p-4 flex flex-col gap-2">
 				<div className="font-heading text-lg font-medium mb-4 px-2">
 					GymTrack
 				</div>
@@ -67,7 +73,7 @@ function DashboardLayout() {
 					</Button>
 				</div>
 			</aside>
-			<main className="flex-1 p-6">
+			<main className="flex-1 p-6 overflow-scroll h-screen">
 				<Outlet />
 			</main>
 		</div>

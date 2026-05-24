@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useState } from "react";
-import { ExcerciceForm, ExcerciceList } from "#/components/excercice";
+import { ExcerciceForm, ExcerciceList } from "#/excercice";
 import { Button } from "#/components/ui/button";
 import type { Excercice } from "#/schemas/excerciceSchema";
 

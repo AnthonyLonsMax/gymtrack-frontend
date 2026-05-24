@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useState } from "react";
-import { ObjetiveForm, ObjetiveList } from "#/components/objetive";
+import { ObjetiveForm, ObjetiveList } from "#/objetive";
 import { Button } from "#/components/ui/button";
 import type { Objetive } from "#/schemas/objetiveSchema";
 

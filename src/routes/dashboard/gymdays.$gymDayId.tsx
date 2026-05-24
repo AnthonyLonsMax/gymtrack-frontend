@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { GymDayDetail } from "#/components/gymday";
-import { useGymDay } from "#/hooks/useGymDays";
+import { GymDayDetail } from "#/gymday";
+import { useGymDay } from "#/gymday/hooks/useGymDays";
 
 export const Route = createFileRoute("/dashboard/gymdays/$gymDayId")({
 	component: GymDayPage,

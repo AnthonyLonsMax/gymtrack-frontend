@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
 import { useState } from "react";
-import { GoalForm, GoalList } from "#/components/goal";
+import { GoalForm, GoalList } from "#/goal";
 import { Button } from "#/components/ui/button";
 import type { Goal } from "#/schemas/goalSchema";
 
