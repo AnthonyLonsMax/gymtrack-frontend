@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 import { useState } from "react";
 import { GoalForm, GoalList } from "#/goal";
 import { Button } from "#/components/ui/button";
-import type { Goal } from "#/schemas/goalSchema";
+import type { Goal } from "#/goal/schema/goalSchema";
 
 export const Route = createFileRoute("/dashboard/goals")({
 	component: GoalsPage,

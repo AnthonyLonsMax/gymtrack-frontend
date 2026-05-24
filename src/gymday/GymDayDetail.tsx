@@ -18,23 +18,23 @@ import {
 	useDeleteGymDayExcerciceDone,
 	useGymDayExcercicesDone,
 	useUpdateGymDayExcerciceDone,
-} from "#/gymday-excercice-done/hooks/useGymDayExcercicesDone";
+} from "#/gymday_excercice_done/hooks/useGymDayExcercicesDone";
 
-import type { GymDay } from "#/schemas/gymDaySchema";
-import type { GymDayExcerciceDone } from "#/schemas/gymDayExcerciceDoneSchema";
-import type { GymDayWorkoutExcercice } from "#/schemas/gymDayWorkoutExcerciceSchema";
-import type { GymDayWorkout } from "#/schemas/gymDayWorkoutSchema";
+import type { GymDay } from "#/gymday/schema/gymDaySchema";
+import type { GymDayExcerciceDone } from "#/gymday_excercice_done/schema/gymDayExcerciceDoneSchema";
+import type { GymDayWorkoutExcercice } from "#/gymday_workout_excercice/schema/gymDayWorkoutExcerciceSchema";
+import type { GymDayWorkout } from "#/gymday_workout/schema/gymDayWorkoutSchema";
 import {
 	useGymDayWorkoutExcercices,
 	useCreateGymDayWorkoutExcercice,
 	useDeleteGymDayWorkoutExcercice,
 	useUpdateGymDayWorkoutExcercice,
-} from "#/gymday-workout-excercice/hooks/useGymDayWorkoutExcercices";
+} from "#/gymday_workout_excercice/hooks/useGymDayWorkoutExcercices";
 import {
 	useGymDayWorkouts,
 	useCreateGymDayWorkout,
 	useDeleteGymDayWorkout,
-} from "#/gymday-workout/hooks/useGymDayWorkouts";
+} from "#/gymday_workout/hooks/useGymDayWorkouts";
 
 export interface GymDayDetailProps {
 	gymDay: GymDay;

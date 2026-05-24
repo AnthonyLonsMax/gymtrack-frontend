@@ -4,7 +4,7 @@ import { notifyError, notifySuccess } from "#/shared/notification";
 import type {
 	GymDayExcerciceDoneCreate,
 	GymDayExcerciceDoneUpdate,
-} from "../../schemas/gymDayExcerciceDoneSchema";
+} from "../schema/gymDayExcerciceDoneSchema";
 import {
 	gymDayExcerciceDoneGetAll,
 	gymDayExcerciceDoneGetOne,

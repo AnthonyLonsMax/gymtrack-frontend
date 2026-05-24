@@ -1,7 +1,7 @@
 import { Pencil, Trash2 } from "lucide-react";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "#/components/ui/card";
-import type { Workout } from "#/schemas/workoutSchema";
+import type { Workout } from "#/workout/schema/workoutSchema";
 
 export interface WorkoutCardProps {
 	workout: Workout;

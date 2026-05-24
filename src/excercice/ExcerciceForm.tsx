@@ -6,11 +6,11 @@ import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 import { WorkoutSelect } from "#/workout";
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Excercice } from "#/schemas/excerciceSchema";
+import type { Excercice } from "#/excercice/schema/excerciceSchema";
 import {
 	excerciceCreateSchema,
 	excerciceUpdateSchema,
-} from "#/schemas/excerciceSchema";
+} from "#/excercice/schema/excerciceSchema";
 import { useCreateExcercice, useUpdateExcercice } from "./hooks/useExcercices";
 
 export interface ExcerciceFormProps {

@@ -1,4 +1,4 @@
-import type { User } from "#/schemas/userSchema";
+import type { User } from "#/user/schema/userSchema";
 import { useUsers, useDeleteUser } from "./hooks/useUsers";
 import { UserCard } from "./UserCard";
 

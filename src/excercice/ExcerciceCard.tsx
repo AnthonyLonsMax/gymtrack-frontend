@@ -1,7 +1,7 @@
 import { Pencil, Trash2 } from "lucide-react";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "#/components/ui/card";
-import type { Excercice } from "#/schemas/excerciceSchema";
+import type { Excercice } from "#/excercice/schema/excerciceSchema";
 
 export interface ExcerciceCardProps {
 	excercice: Excercice;

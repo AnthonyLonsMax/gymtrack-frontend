@@ -1,5 +1,5 @@
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Workout } from "#/schemas/workoutSchema";
+import type { Workout } from "#/workout/schema/workoutSchema";
 import { useWorkouts, useDeleteWorkout } from "./hooks/useWorkouts";
 import { WorkoutCard } from "./WorkoutCard";
 

@@ -1,7 +1,7 @@
 import { Pencil, Trash2 } from "lucide-react";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "#/components/ui/card";
-import type { Objetive } from "#/schemas/objetiveSchema";
+import type { Objetive } from "#/objetive/schema/objetiveSchema";
 
 export interface ObjetiveCardProps {
 	objetive: Objetive;

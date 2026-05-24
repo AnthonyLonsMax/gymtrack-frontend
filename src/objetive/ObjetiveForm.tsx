@@ -4,11 +4,11 @@ import { Button } from "#/components/ui/button";
 import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Objetive } from "#/schemas/objetiveSchema";
+import type { Objetive } from "#/objetive/schema/objetiveSchema";
 import {
 	objetiveCreateSchema,
 	objetiveUpdateSchema,
-} from "#/schemas/objetiveSchema";
+} from "#/objetive/schema/objetiveSchema";
 import { useCreateObjetive, useUpdateObjetive } from "./hooks/useObjetives";
 
 export interface ObjetiveFormProps {

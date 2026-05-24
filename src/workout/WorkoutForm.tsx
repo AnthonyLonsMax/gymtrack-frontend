@@ -4,11 +4,11 @@ import { Button } from "#/components/ui/button";
 import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Workout } from "#/schemas/workoutSchema";
+import type { Workout } from "#/workout/schema/workoutSchema";
 import {
 	workoutCreateSchema,
 	workoutUpdateSchema,
-} from "#/schemas/workoutSchema";
+} from "#/workout/schema/workoutSchema";
 import { useCreateWorkout, useUpdateWorkout } from "./hooks/useWorkouts";
 
 export type WorkoutFormProps = {

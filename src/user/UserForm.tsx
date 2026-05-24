@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { Button } from "#/components/ui/button";
 import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
-import type { User } from "#/schemas/userSchema";
-import { userCreateSchema, userUpdateSchema } from "#/schemas/userSchema";
+import type { User } from "#/user/schema/userSchema";
+import { userCreateSchema, userUpdateSchema } from "#/user/schema/userSchema";
 import { useCreateUser, useUpdateUser } from "./hooks/useUsers";
 
 export interface UserFormProps {

@@ -7,12 +7,12 @@ import { Label } from "#/components/ui/label";
 import {
 	useCreateGymDayExcerciceDone,
 	useUpdateGymDayExcerciceDone,
-} from "#/gymday-excercice-done/hooks/useGymDayExcercicesDone";
-import type { GymDayExcerciceDone } from "#/schemas/gymDayExcerciceDoneSchema";
+} from "#/gymday_excercice_done/hooks/useGymDayExcercicesDone";
+import type { GymDayExcerciceDone } from "#/gymday_excercice_done/schema/gymDayExcerciceDoneSchema";
 import {
 	gymDayExcerciceDoneCreateSchema,
 	gymDayExcerciceDoneUpdateSchema,
-} from "#/schemas/gymDayExcerciceDoneSchema";
+} from "#/gymday_excercice_done/schema/gymDayExcerciceDoneSchema";
 
 export interface GymDayExcerciceDoneFormProps {
 	excercice?: GymDayExcerciceDone;

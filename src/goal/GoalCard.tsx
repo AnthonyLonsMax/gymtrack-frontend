@@ -1,7 +1,7 @@
 import { CheckCircle2, Circle, Pencil, Trash2 } from "lucide-react";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "#/components/ui/card";
-import type { Goal } from "#/schemas/goalSchema";
+import type { Goal } from "#/goal/schema/goalSchema";
 
 export interface GoalCardProps {
 	goal: Goal;

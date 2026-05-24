@@ -1,4 +1,4 @@
-import type { GoalCreate, GoalUpdate } from "#/schemas/goalSchema";
+import type { GoalCreate, GoalUpdate } from "#/goal/schema/goalSchema";
 import { notifySuccess, notifyError } from "#/shared/notification";
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import {

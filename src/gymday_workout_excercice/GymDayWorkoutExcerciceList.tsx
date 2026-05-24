@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import type { GymDayWorkoutExcercice } from "#/schemas/gymDayWorkoutExcerciceSchema";
+import type { GymDayWorkoutExcercice } from "#/gymday_workout_excercice/schema/gymDayWorkoutExcerciceSchema";
 import { GymDayWorkoutExcerciceCard } from "./GymDayWorkoutExcerciceCard";
 import {
 	useDeleteGymDayWorkoutExcercice,

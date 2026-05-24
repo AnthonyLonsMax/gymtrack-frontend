@@ -6,8 +6,8 @@ import { Button } from "#/components/ui/button";
 import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Goal } from "#/schemas/goalSchema";
-import { goalCreateSchema, goalUpdateSchema } from "#/schemas/goalSchema";
+import type { Goal } from "#/goal/schema/goalSchema";
+import { goalCreateSchema, goalUpdateSchema } from "#/goal/schema/goalSchema";
 import { useCreateGoal, useUpdateGoal } from "./hooks/useGoals";
 
 export interface GoalFormProps {

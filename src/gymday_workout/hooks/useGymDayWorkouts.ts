@@ -1,7 +1,7 @@
 import type {
 	GymDayWorkoutCreate,
 	GymDayWorkoutUpdate,
-} from "#/schemas/gymDayWorkoutSchema";
+} from "#/gymday_workout/schema/gymDayWorkoutSchema";
 import { notifySuccess, notifyError } from "#/shared/notification";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {

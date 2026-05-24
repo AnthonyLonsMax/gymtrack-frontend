@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 import { useState } from "react";
 import { ObjetiveForm, ObjetiveList } from "#/objetive";
 import { Button } from "#/components/ui/button";
-import type { Objetive } from "#/schemas/objetiveSchema";
+import type { Objetive } from "#/objetive/schema/objetiveSchema";
 
 export const Route = createFileRoute("/dashboard/objetives")({
 	component: ObjetivesPage,

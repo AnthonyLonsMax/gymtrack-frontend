@@ -4,7 +4,7 @@ import type {
 	Workout,
 	WorkoutCreate,
 	WorkoutUpdate,
-} from "#/schemas/workoutSchema";
+} from "#/workout/schema/workoutSchema";
 
 export async function workoutGetAll(userId: string, limit = 10, offset = 0) {
 	return axiosInstance

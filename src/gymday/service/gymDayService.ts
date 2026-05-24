@@ -1,4 +1,4 @@
-import type { GymDay, GymDayCreate } from "#/schemas/gymDaySchema";
+import type { GymDay, GymDayCreate } from "#/gymday/schema/gymDaySchema";
 import mapError from "#/shared/mapError";
 import { axiosInstance } from "#/shared/axios";
 

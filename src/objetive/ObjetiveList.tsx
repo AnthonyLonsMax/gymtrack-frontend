@@ -1,5 +1,5 @@
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Objetive } from "#/schemas/objetiveSchema";
+import type { Objetive } from "#/objetive/schema/objetiveSchema";
 import { useObjetives, useDeleteObjetive } from "./hooks/useObjetives";
 import { ObjetiveCard } from "./ObjetiveCard";
 

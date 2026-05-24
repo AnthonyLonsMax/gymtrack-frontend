@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { WorkoutSelect } from "#/workout";
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Excercice } from "#/schemas/excerciceSchema";
+import type { Excercice } from "#/excercice/schema/excerciceSchema";
 import { ExcerciceCard } from "./ExcerciceCard";
 import { useExcercices, useDeleteExcercice } from "./hooks/useExcercices";
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ObjetiveSelect } from "#/objetive/ObjetiveSelect";
 import { useAuthStore } from "#/auth/store/useAuthStore";
-import type { Goal } from "#/schemas/goalSchema";
+import type { Goal } from "#/goal/schema/goalSchema";
 import { GoalCard } from "./GoalCard";
 import { useGoals, useDeleteGoal } from "./hooks/useGoals";
 

@@ -2,7 +2,7 @@ import type {
 	Excercice,
 	ExcerciceCreate,
 	ExcerciceUpdate,
-} from "#/schemas/excerciceSchema";
+} from "#/excercice/schema/excerciceSchema";
 import mapError from "#/shared/mapError";
 import { axiosInstance } from "#/shared/axios";
 

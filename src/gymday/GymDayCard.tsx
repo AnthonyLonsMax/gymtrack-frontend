@@ -2,7 +2,7 @@ import { Eye, Trash2 } from "lucide-react";
 import { useNavigate } from "@tanstack/react-router";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "#/components/ui/card";
-import type { GymDay } from "#/schemas/gymDaySchema";
+import type { GymDay } from "#/gymday/schema/gymDaySchema";
 
 export interface GymDayCardProps {
 	gymDay: GymDay;

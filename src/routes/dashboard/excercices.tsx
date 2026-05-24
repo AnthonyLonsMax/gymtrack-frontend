@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 import { useState } from "react";
 import { ExcerciceForm, ExcerciceList } from "#/excercice";
 import { Button } from "#/components/ui/button";
-import type { Excercice } from "#/schemas/excerciceSchema";
+import type { Excercice } from "#/excercice/schema/excerciceSchema";
 
 export const Route = createFileRoute("/dashboard/excercices")({
 	component: ExcercicesPage,

@@ -2,8 +2,8 @@ import { useState } from "react";
 import {
 	useDeleteGymDayExcerciceDone,
 	useGymDayExcercicesDone,
-} from "#/gymday-excercice-done/hooks/useGymDayExcercicesDone";
-import type { GymDayExcerciceDone } from "#/schemas/gymDayExcerciceDoneSchema";
+} from "#/gymday_excercice_done/hooks/useGymDayExcercicesDone";
+import type { GymDayExcerciceDone } from "#/gymday_excercice_done/schema/gymDayExcerciceDoneSchema";
 import { GymDayExcerciceDoneCard } from "./GymDayExcerciceDoneCard";
 
 export interface GymDayExcerciceDoneListProps {

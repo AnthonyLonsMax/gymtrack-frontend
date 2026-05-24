@@ -2,7 +2,7 @@ import type {
 	GymDayWorkoutExcercice,
 	GymDayWorkoutExcerciceCreate,
 	GymDayWorkoutExcerciceUpdate,
-} from "#/schemas/gymDayWorkoutExcerciceSchema";
+} from "#/gymday_workout_excercice/schema/gymDayWorkoutExcerciceSchema";
 import mapError from "#/shared/mapError";
 import { axiosInstance } from "#/shared/axios";
 

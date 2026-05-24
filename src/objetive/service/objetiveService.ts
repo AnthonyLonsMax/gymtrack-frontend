@@ -2,7 +2,7 @@ import type {
 	Objetive,
 	ObjetiveCreate,
 	ObjetiveUpdate,
-} from "#/schemas/objetiveSchema";
+} from "#/objetive/schema/objetiveSchema";
 import mapError from "#/shared/mapError";
 import { axiosInstance } from "#/shared/axios";
 

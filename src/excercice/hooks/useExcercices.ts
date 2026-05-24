@@ -1,7 +1,7 @@
 import type {
 	ExcerciceCreate,
 	ExcerciceUpdate,
-} from "#/schemas/excerciceSchema";
+} from "#/excercice/schema/excerciceSchema";
 import { notifyError, notifySuccess } from "#/shared/notification";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {

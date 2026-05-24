@@ -1,4 +1,4 @@
-import type { Goal, GoalCreate, GoalUpdate } from "#/schemas/goalSchema";
+import type { Goal, GoalCreate, GoalUpdate } from "#/goal/schema/goalSchema";
 import mapError from "#/shared/mapError";
 import { axiosInstance } from "#/shared/axios";
 

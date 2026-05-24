@@ -5,11 +5,11 @@ import { Button } from "#/components/ui/button";
 import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 
-import type { GymDayWorkoutExcercice } from "#/schemas/gymDayWorkoutExcerciceSchema";
+import type { GymDayWorkoutExcercice } from "#/gymday_workout_excercice/schema/gymDayWorkoutExcerciceSchema";
 import {
 	gymDayWorkoutExcerciceCreateSchema,
 	gymDayWorkoutExcerciceUpdateSchema,
-} from "#/schemas/gymDayWorkoutExcerciceSchema";
+} from "#/gymday_workout_excercice/schema/gymDayWorkoutExcerciceSchema";
 import {
 	useCreateGymDayWorkoutExcercice,
 	useUpdateGymDayWorkoutExcercice,
