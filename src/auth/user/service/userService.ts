@@ -1,6 +1,6 @@
 import mapError from "#/shared/mapError";
 import { axiosInstance } from "#/shared/axios";
-import type { UserCreate, UserUpdate } from "#/user/schema/userSchema";
+import type { UserCreate, UserUpdate } from "#/auth/user/schema/userSchema";
 import type { User } from "#/types/auth";
 
 export async function userGetAll(limit = 10, offset = 0) {

@@ -1,7 +1,7 @@
 import { Pencil, Trash2 } from "lucide-react";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "#/components/ui/card";
-import type { User } from "#/user/schema/userSchema";
+import type { User } from "#/auth/user/schema/userSchema";
 
 export interface UserCardProps {
 	user: User;
